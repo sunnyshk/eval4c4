@@ -9,7 +9,6 @@ export const Logout = () => {
   useEffect(() => {
     dispatch(isAuth(false));
     dispatch(User(""));
-
     navigate("/");
   });
 

@@ -20,11 +20,9 @@ export const Login = () => {
       );
       let data = await res.json();
       data = await data;
-      //   console.log(data);
       dispatch(isAuth(true));
       dispatch(User(data[0]));
 
-      //   console.log(data[0]);
       if (data[0].role === "admin") {
         navigate("/orders");
       } else if (data[0].role === "client") {
